@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <!-- JS -->   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <style>
+      .nav{
+        height: 70px;
+        border-bottom: 1px solid black;
+        display: flex;
+        align-items: center;
+      }
+      .nav-right-items{
+        display:flex;
+        margin-left: auto;
+      }
+      .nav-item{
+        margin-left: 15px;
+      }
+      .company-name{
+        margin-left: 20px;
+      }
+      .title{
+        text-align: center;
+        font-size: 3.5rem;
+        font-weight: bold;
+      }
+      .subtitle{
+        text-align: center;
+        font-size:1.25rem;
+        font-weight:300;
+      }
+      .main{
+        width: 1000px;
+        margin: 0 auto;
+        margin-top: 60px;
+      }
+      .price{
+        display:flex; //가로로 정렬
+      }
+      .price-item{
+        width: 300px;
+        height: 320px;
+        border: 1px solid black; //테두리 검은색으로 그려주기
+        //margin: 20px;
+        margin-top: 60px;
+        margin-left: 35px;
+        text-align: center; //텍스트의 위치를 중간으로
+        border-radius: 4px; //모서리 부분 둥그렇게 만들어주기
+      }
+      .price-item-title{
+        font-size:1.5rem;
+        background: rgba(0,0,0,.03);
+        height:53px;
+        line-height: 53px; //글자를 해당 사이즈안에서도 중간으로 정렬
+        border-bottom: 1px solid black; //테두리도 그려주기
+      }
+      .price-item-price{
+        font-size:1.25rem;
+        font-weight: bold;
+        padding: 20px;
+      }
+      .price-item-detail{
+        margin-bottom:5px;
+        font-size:16px;
+      }
+      .price-item-button{
+        width: 200px;
+        padding: .5rem 1rem;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        border-radius: .3rem;
+        color: #007bff;
+        background-color: transparent;
+        background-image: none;
+        border-color: #007bff;
+        margin-top: 20px;
+      }
+      .price-item-button--active{
+        background-color:#007bff;
+        color:white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="company-name">
+        명품 하울 샵
+      </div>
+      <div class="nav-right-items">
+        <div class="nav-item">MY INFO</div>
+        <div class="nav-item">ORDER</div>
+        <div class="nav-item">MY PAGE</div>
+        <div class="nav-item">BOARD</div>
+        <div class="nav-item">
+          <button type="button" class="btn btn-outline-primary">LOGIN</button>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="title">
+        products
+      </div>
+      <div class="subtitle">
+        The Lady Dior line symbolizes the couture spirit of the Dior house. Crafted from exquisite hand-crafted black lambskin bags, this canadian stitching symbolizes Dior.
+
+        Black Sheepskin Lady Dior Bag
+        Canazu stitching
+        Pale gold jewelery
+        Wear as a tote or shoulder bag
+        Size: 24 x 20 x 11cm
+
+        Christian Dior Couture Korea Co., Ltd.
+        Country of origin: Italy
+        Handling Precautions: Avoid contact with water or all chemicals. Please keep it in the shade and be careful not to expose it to all kinds of heat including moisture. Keep it clean with soft cotton.
+      </div>
+      <div class="price">
+        <div class="price-item">
+          <div class="price-item-title">
+            Bags
+          </div>
+          <div class="price-item-price">
+            Avg-price : $1500 / mo
+          </div>
+          <div class="price-item-detail">
+            Yves Saint Laurent
+          </div>
+          <div class="price-item-detail">
+            Gucci
+          </div>
+          <div class="price-item-detail">
+            Louis Vuitton
+          </div>
+          <div class="price-item-detail">
+            Prada
+          </div>
+          <button class="price-item-button" type="button" onclick="location.href='bag.html'">
+            자세히 보기
+          </button>
+        </div>
+        <div class="price-item">
+          <div class="price-item-title">
+            shoes
+          </div>
+          <div class="price-item-price">
+            Avg-price : $700 / mo
+          </div>
+          <div class="price-item-detail">
+            Yves Saint Laurent
+          </div>
+          <div class="price-item-detail">
+            Gucci
+          </div>
+          <div class="price-item-detail">
+            Louis Vuitton
+          </div>
+          <div class="price-item-detail">
+            Prada
+          </div>
+          <button class="price-item-button price-item-button--active" type="button" onclick="location.href='shoes.html'">
+            자세히 보기
+          </button>
+        </div>
+        <div class="price-item">
+          <div class="price-item-title">
+            Clothes
+          </div>
+          <div class="price-item-price">
+            Avg-price : $2500 / mo
+          </div>
+          <div class="price-item-detail">
+            Yves Saint Laurent
+          </div>
+          <div class="price-item-detail">
+            Gucci
+          </div>
+          <div class="price-item-detail">
+            Louis Vuitton
+          </div>
+          <div class="price-item-detail">
+            Prada
+          </div>
+          <button class="price-item-button price-item-button--active" type="button" onclick="location.href='clothes.html'">
+            자세히 보기
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
