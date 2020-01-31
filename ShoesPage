@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <style>
+      *{
+        width:500px;
+        margin: auto; //모든 항목들 가운데로 정렬
+      }
+      .specification{
+        margin-top:20px;
+        font-size: 15px;
+      }
+      .subtitle{
+        margin-top:25px;
+      }
+      .main{
+        margin-top:20px;
+      }
+      .order_btn{
+        margin-top:30px;
+        border-color: #007bff;
+        background-color:#007bff;
+        color:white;
+      }
+      .table{
+        margin-top: 30px;
+        border: 1px solid black;
+      }
+      th, td{
+        border: 1px solid black;
+      }
+    </style>
+    <script>
+      function order(){
+        let name = $('#name').val();
+        let count = $('#count').val();
+        let address = $('#address').val();      
+        let number = $('#number').val();
+        
+        let temp = '<tr>\<td>'+name+'</td>\<td>'+count+'</td>\<td>'+address+'</td>\<td>'+
+        number+'</td>\</tr>';
+        $('#lists').append(temp);
+      }
+    </script>
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <div>
+      <img src="http://image.lotte.com/goods/59/20/58/34/7/734582059_1_550.jpg" style="width:350px"/>
+    </div>
+    <div>
+      <p class="title">
+        <h1>[생로랑]골드 YSL 로고힐 펌프스 힐/472011 0NPKK 1000</h1>
+        <h5>가격: 1,280,000원 / 개</h5>
+      </p>
+      <h3 class="specification">Gucci is an Italian luxury brand. It is owned by the French distribution company Careling and manufactures and sells bags, clothing and watches as its flagship products. The concept is "making products that reflect the best traditions with the best quality and the outstanding products of the past in modern times.</h3>
+    </div>
+    <div>
+      <h1 class="subtitle">주문하기</h1>
+      <div class="main">
+        <p>
+          주문자 성함:
+          <input type="text" id="name"/>
+        </p>
+        <p>
+          수량:
+           <select class="form-control" id="count">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </p>
+        <p>
+          주소:
+          <input type="text" id="address"/>
+        </p>
+        <p>
+          전화번호:
+          <input type="text" id="number"/>
+        </p>
+      </div>
+    </div>
+    <button class="order_btn" onclick="order()">주문하기</button>
+
+    <div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">주문자 이름</th>
+            <th scope="col">수량</th>
+            <th scope="col">주소</th>
+            <th scope="col">전화번호</th>
+          </tr>
+        </thead>
+        <tbody id="lists">
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
+
+
