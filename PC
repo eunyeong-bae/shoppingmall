@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Product Description</title>
+	<style type="text/css">
+		img {
+			width: 400px;
+			height: 300px;
+			padding-left: 430px;
+			padding-bottom: 20px;
+		}
+		.title1{
+			display: flex;
+			flex-direction: row;
+		}
+		div.title1 p{
+			padding-top: 20px;
+			padding-left: 10px;
+		}
+		.description{
+			margin: 0;
+		}
+		.btn{
+			width: 100px;
+			height: 50px;
+			margin-left: 550px;
+			margin-top: 30px;
+		}
+		.first{
+			padding-left: 10px;
+		}
+		.second{
+			padding-left: 10px;
+			margin-top: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<img src="https://www.navimro.com/img/pi/full/K21439127.jpg" alt="삼성노트북 펜S" title="삼성노트북">
+		<div class="first">
+			<div class="title1">
+				<h1>상품 제목</h1>
+				<p>가격 : 802,989 / 개</p>
+			</div>
+			<p class="description">	
+				상세한 정보는 하단 상세페이지 참고
+				Inter Pentium Gold 프로세서 탑재 (4415U 2.3Ghz 듀얼코어)
+				13.3인치 (33.78cm) / 1920×1080 터치 디스플레이
+				기본구성 제품
+				카비레이크
+
+				주의사항
+				상품특성상 상품을 개봉한 뒤 단순 반품할 수 없습니다.
+				초기불량 외 반품 불가</p>
+		</div>
+		<div class="second">
+			<h1>주문하기</h1>
+			<p>
+				<label for="order_name"> 주문자 성함 : </label>
+				<input id="order_name" type="text" name="name" value="Input your name">
+			</p>
+			<p>
+				<label for="count">주문 개수:</label>
+				<select id="count" name="count">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select>
+			</p>
+			<p>
+				<label for="Address"> 주소 : </label>
+				<input id="Address" type="text" name="Address" value="Input your Address">
+			</p>
+			<p>
+				<label for="phone_number"> 전화 번호 : </label>
+				<input id="phone_number" type="text" name="number" value="Input your Phone number">
+			</p>
+		</div>
+		<button class="btn">주문하기</button>
+	</div>
+</body>
+</html>
