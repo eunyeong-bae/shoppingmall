@@ -14,10 +14,6 @@
 			font-size: 30px;
 			color:white;
 		}
-		header a{
-			text-decoration: none;
-			color: white;
-		}
 		nav ul{
 			list-style-type: none;
 			margin: 0;
@@ -38,18 +34,10 @@
 		nav li a:hover{
 			background-color: #111111;
 		}
-		article ul{
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-			overflow: hidden;
-		}
-		article li{
-			float: left;
-			margin: 50px;
-		}
-		article li a{
-			text-decoration: none;
+		article div{
+			width: 300px;
+			margin: 100px auto 100px auto;
+			border: 1px solid #EFFBFB;
 		}
 		footer{
 			background-color: #F8E0E6;
@@ -67,9 +55,7 @@
 </head>
 <body>
 	<header>
-		<a href="index.html">
-			<h1>Bae_zzi's Beauty</h1>
-		</a>
+		<h1>Bae_zzi's Beauty</h1>
 	</header>
 	<section>
 		<nav>
@@ -84,29 +70,17 @@
 			</ul>
 		</nav>
 		<article>
-			<ul>
-				<li>
-					<a href="face.html">
-						<img src="http://i.011st.com/ex_t/R/400x400/1/85/0/src/pd/20/6/3/6/8/8/0/exaxn/2803636880_B.jpg" alt="Foundation" style="width:200px; height:150px;">
-					</a>	
-				</li>
-				<li>
-					<a href="lip.html">
-						<img src="https://www.dior.com/beauty/version-5.1520000000200/resize-image/ep/460/498/90/0/horizon%252Fcovers%252FY0028752_F002875765_E01_GHC.jpg" alt="Lipstick" style="width:200px; height:150px;">
-					</a>
-				</li>
-				<li>
-					<a href="eye.html">
-						<img src="https://gd.image-gmkt.com/li/575/694/754694575.g_520-w_g.jpg" alt="Eye Shadow" style="width:200px; height:150px;">
-					</a>
-				</li>
-				<li>
-					<a href="clensor.html">
-						<img src="https://photo.akmall.com/image2/goods/78/57/36/17/78573617_M_350.jpg" alt="Cleansing Oil" style="width:200px;height: 150px;">						
-					</a>
-
-				</li>		
-			</ul>
+			<div>
+				<p>
+					<label for="ID">ID:</label>
+					<input id="ID" type="text" name="id" title="input your id">
+				</p>
+				<p>
+					<label for="password">PW:</label>
+					<input id="password" type="password" name="pwd" title="input your password">
+				</p>
+				<input type="submit" value="로그인하기">
+			</div>
 		</article>
 	</section>
 	<footer>

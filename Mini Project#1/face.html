@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bae_zzi's Mall</title>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		header{
+			background-color: #F8E0E6;
+			text-align: center;
+			padding:20px;
+			font-size: 30px;
+			color:white;
+		}
+		nav ul{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			background-color: #333333;
+			overflow: hidden;
+		}
+		nav li{
+			float: left;
+		}
+		nav li a{
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 16px;
+			text-decoration: none;
+		}
+		nav li a:hover{
+			background-color: #111111;
+		}
+		article{
+			padding: 30px;
+			margin: 20px;
+		}
+		article table{
+			margin-top: 50px;
+		}
+		section button{
+			width: 100px;
+			margin: 0 0 30px 200px;
+
+		}
+		footer{
+			background-color: #F8E0E6;
+			padding: 10px;
+			text-align: center;
+			color: white;
+		}
+		@media screen(max-width: 600px) {
+			nav,article{
+				width: 100%;
+				height: auto;
+			}
+		}
+	</style>
+	<script type="text/javascript">
+		function order(){
+			alert('아직 서비스가 준비되지 못했습니다.');
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<h1>Bae_zzi's Beauty</h1>
+	</header>
+	<section>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="face.html">Face</a></li>
+				<li><a href="eye.html">Eye</a></li>
+				<li><a href="lip.html">Lip</a></li>
+				<li><a href="clensor.html">Clensor</a></li>
+				<li><a href="board.html">Board</a></li>
+				<li><a href="#login">Login</a></li>
+			</ul>
+		</nav>
+		<article>
+			<img src="http://i.011st.com/ex_t/R/400x400/1/85/0/src/pd/20/6/3/6/8/8/0/exaxn/2803636880_B.jpg" alt="Foundation" style="width:400px; height:250px;">
+			<table border="2">
+				<tr>
+					<th>상품상태</th>
+					<td>새상품</td>
+					<th>상품번호</th>
+					<td>28390582</td>
+				</tr>
+				<tr>
+					<th>배송방법</th>
+					<td>(해외항공배송) + 택배</td>
+					<th>배송가능지역</th>
+					<td>전국</td>
+				</tr>
+				<tr>
+					<th>제조일자/유효기간</th>
+					<td colspan="3">판매자에게 문의</td>
+				</tr>
+				<tr>
+					<th>A/S안내</th>
+					<td colspan="3">해외구매 대행 상품은 A/S 불가</td>
+				</tr>
+				<tr>
+					<th>브랜드</th>
+					<td colspan="3">조르지오 아르마니</td>
+				</tr>
+				<tr>
+					<th>품명 및 모델명</th>
+					<td colspan="3">아르마니 투 고 쿠션 15g 본품 1개</td>
+				</tr>
+			</table>
+		</article>
+		<div>
+			<button class="btn_order" onclick="order()">주문하기</button>
+		</div>
+	</section>
+	<footer>
+		<p>@bae_zzi's shopping mall</p>
+	</footer>
+</body>
+</html>
