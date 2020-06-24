@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bae_zzi's Mall</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		header{
+			background-color: #F8E0E6;
+			text-align: center;
+			padding:20px;
+			font-size: 30px;
+			color:white;
+		}
+		header a{
+			text-decoration: none;
+			color: white;
+		}
+		#order_list{
+			display: none;
+		}
+		nav ul{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			background-color: #333333;
+			overflow: hidden;
+		}
+		nav li{
+			float: left;
+		}
+		nav li a{
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 16px;
+			text-decoration: none;
+		}
+		nav li a:hover{
+			background-color: #111111;
+		}
+		article{
+			width:400px;
+			height: auto;
+			margin: 30px auto 30px auto;
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+		}
+		article table{
+			margin-top: 50px;
+		}
+		fieldset{
+			width: 500px;
+			margin: 30px auto 30px auto;
+			display: flex;
+			flex-direction: row;
+			align-content: center; 
+		}
+		section button{
+			width: 100px;
+			margin: 20px 0 0 150px;
+		}
+		footer{
+			background-color: #F8E0E6;
+			padding: 10px;
+			text-align: center;
+			color: white;
+		}
+		@media screen(max-width: 600px) {
+			nav,article{
+				width: 100%;
+				height: auto;
+			}
+		}
+	</style>
+	<script type="text/javascript">
+		//주문하기 버튼 클릭 시, 주문서 양식 보여주기
+		function showing_orderlist(){
+			if($('#order_list').css('display')=='none'){
+				$('#order_list').show();
+			}
+			else
+				$('#order_list').hide();
+		}
+		function product_order(){
+			alert('주문되었습니다!');
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<a href="index.html">
+			<h1>Bae_zzi's Beauty</h1>
+		</a>
+	</header>
+	<section>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="face.html">Face</a></li>
+				<li><a href="eye.html">Eye</a></li>
+				<li><a href="lip.html">Lip</a></li>
+				<li><a href="clensor.html">Clensor</a></li>
+				<li><a href="board.html">Board</a></li>
+				<li><a href="login.html">Login</a></li>
+			</ul>
+		</nav>
+		<article>
+			<img src="https://gd.image-gmkt.com/li/575/694/754694575.g_520-w_g.jpg" alt="Eye Shadow" style="width:400px; height:250px;">
+			<table border="2">
+				<tr>
+					<th>상품상태</th>
+					<td>새상품</td>
+					<th>상품번호</th>
+					<td>28390535</td>
+				</tr>
+				<tr>
+					<th>배송방법</th>
+					<td>(해외항공배송) + 택배</td>
+					<th>배송가능지역</th>
+					<td>전국</td>
+				</tr>
+				<tr>
+					<th>제조일자/제조사</th>
+					<td colspan="3">판매자에게 문의/USA</td>
+				</tr>
+				<tr>
+					<th>A/S안내</th>
+					<td colspan="3">A/S 센터 또는 제조사 또는 판매자에게 연락하세요</td>
+				</tr>
+				<tr>
+					<th>브랜드</th>
+					<td colspan="3">MAC 맥</td>
+				</tr>
+				<tr>
+					<th>품명 및 모델명</th>
+					<td colspan="3">맥 아이섀도우 9종 칼라(MAC eye shadow 9 Color)</td>
+				</tr>
+			</table>
+			<button id="showing_list_btn" onclick="showing_orderlist()">주문하기</button>
+		</article>
+		<div>
+			<fieldset id="order_list">
+				<legend>주문 양식</legend>
+				<form>
+					<label for="uname">주문자 성함:</label><br>
+					<input type="text" id="uname" name="uname" placeholder="홍길동"><br>
+					<label for="uaddress">배송받을 주소:</label><br>
+					<input type="text" id="uaddress" name="uaddress" placeholder="서울특별시 강남구..."><br>
+					<label for="uselect">개수 선택:</label><br>
+					<form>
+						<input list="uselect">
+						<datalist id="uselect">
+							<option value="1" />
+							<option value="2" />
+							<option value="3" />
+							<option value="4" />
+							<option value="5" />
+						</datalist>
+					</form><br>
+					<label for="ucomment">배송기사에게 전달할 말:</label><br>
+					<textarea rows="3" placeholder="배송 전 문자롤 알림주세요.. 등"></textarea><br>
+					<button id="ordering_btn" onclick="product_order()">주문</button>
+				</form>
+			</fieldset>
+		</div>
+	</section>
+	<footer>
+		<p>@bae_zzi's shopping mall</p>
+	</footer>
+</body>
+</html>
