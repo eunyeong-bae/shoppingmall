@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Bae_zzi's Mall</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<style type="text/css">
 		*{
 			box-sizing: border-box;
@@ -13,6 +14,9 @@
 			padding:20px;
 			font-size: 30px;
 			color:white;
+		}
+		#order_list{
+			display: none;
 		}
 		nav ul{
 			list-style-type: none;
@@ -35,16 +39,29 @@
 			background-color: #111111;
 		}
 		article{
-			padding: 30px;
-			margin: 20px;
+			width:800px;
+			height: auto;
+			margin: 30px auto 30px auto;
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+		}
+		article img{
+			margin-left: 200px; 
 		}
 		article table{
 			margin-top: 50px;
 		}
-		section button{
-			width: 100px;
-			margin: 0 0 30px 200px;
-
+		article button{
+			width: 150px;
+			margin: 30px 0 0 320px;
+		}
+		fieldset{
+			width: 500px;
+			margin: 30px auto 30px auto;
+			display: flex;
+			flex-direction: row;
+			align-content: center; 
 		}
 		footer{
 			background-color: #F8E0E6;
@@ -60,8 +77,16 @@
 		}
 	</style>
 	<script type="text/javascript">
-		function order(){
-			alert('아직 서비스가 준비되지 못했습니다.');
+		//주문하기 버튼 클릭 시, 주문서 양식 보여주기
+		function showing_orderlist(){
+			if($('#order_list').css('display')=='none'){
+				$('#order_list').show();
+			}
+			else
+				$('#order_list').hide();
+		}
+		function product_order(){
+			alert('주문되었습니다!');
 		}
 	</script>
 </head>
@@ -78,7 +103,7 @@
 				<li><a href="lip.html">Lip</a></li>
 				<li><a href="clensor.html">Clensor</a></li>
 				<li><a href="board.html">Board</a></li>
-				<li><a href="#login">Login</a></li>
+				<li><a href="login.html">Login</a></li>
 			</ul>
 		</nav>
 		<article>
@@ -88,7 +113,7 @@
 					<th>상품상태</th>
 					<td>새상품</td>
 					<th>상품번호</th>
-					<td>28390582</td>
+					<td>2838545587</td>
 				</tr>
 				<tr>
 					<th>배송방법</th>
@@ -102,20 +127,43 @@
 				</tr>
 				<tr>
 					<th>A/S안내</th>
-					<td colspan="3">해외구매 대행 상품은 A/S 불가</td>
+					<td colspan="3">스트로베리넷은 홍콩에 위치하고 있으며 온도 조절 시스템을 갖춘 유통 센터에서 주요 지역에 다음날까지 배송됩니다. 이메일 cskr@strawberrynet.com 톨프리: 00798 8521 0804팩스 +852-2811-5138사업장 주소Strawberry Fields,No. 4 A Kung Ngam Village Road,Shau Kei Wan,Hong Kong</td>
 				</tr>
 				<tr>
 					<th>브랜드</th>
-					<td colspan="3">조르지오 아르마니</td>
+					<td colspan="3">디올</td>
 				</tr>
 				<tr>
 					<th>품명 및 모델명</th>
-					<td colspan="3">아르마니 투 고 쿠션 15g 본품 1개</td>
+					<td colspan="3">크리스챤 디올 - 디올 어딕트 스텔라 샤인 립스틱(#662 3.2g/0.11oz)</td>
 				</tr>
 			</table>
+			<button id="showing_list_btn" onclick="showing_orderlist()">주문하기</button>
 		</article>
 		<div>
-			<button class="btn_order" onclick="order()">주문하기</button>
+			<fieldset id="order_list">
+				<legend>주문 양식</legend>
+				<form>
+					<label for="uname">주문자 성함:</label><br>
+					<input type="text" id="uname" name="uname" placeholder="홍길동"><br>
+					<label for="uaddress">배송받을 주소:</label><br>
+					<input type="text" id="uaddress" name="uaddress" placeholder="서울특별시 강남구..."><br>
+					<label for="uselect">개수 선택:</label><br>
+					<form>
+						<input list="uselect">
+						<datalist id="uselect">
+							<option value="1" />
+							<option value="2" />
+							<option value="3" />
+							<option value="4" />
+							<option value="5" />
+						</datalist>
+					</form><br>
+					<label for="ucomment">배송기사에게 전달할 말:</label><br>
+					<textarea rows="3" placeholder="배송 전 문자롤 알림주세요.. 등"></textarea><br>
+					<button id="ordering_btn" onclick="product_order()">주문</button>
+				</form>
+			</fieldset>
 		</div>
 	</section>
 	<footer>

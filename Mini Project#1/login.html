@@ -34,10 +34,14 @@
 		nav li a:hover{
 			background-color: #111111;
 		}
-		article div{
-			width: 300px;
-			margin: 100px auto 100px auto;
-			border: 1px solid #EFFBFB;
+		article fieldset{
+			width: 350px;
+			margin: 100px auto 40px auto;
+			border: 1px solid black;
+		}
+		.login_btn{
+			width: 100px;
+			margin: 0 450px 50px 550px ;
 		}
 		footer{
 			background-color: #F8E0E6;
@@ -70,17 +74,16 @@
 			</ul>
 		</nav>
 		<article>
-			<div>
-				<p>
-					<label for="ID">ID:</label>
-					<input id="ID" type="text" name="id" title="input your id">
-				</p>
-				<p>
-					<label for="password">PW:</label>
+			<form>
+				<fieldset>
+					<legend>Login</legend>
+					<label for="ID">ID:</label><br>
+					<input id="ID" type="text" name="id" title="input your id"><br>
+					<label for="password">PW:</label><br>
 					<input id="password" type="password" name="pwd" title="input your password">
-				</p>
-				<input type="submit" value="로그인하기">
-			</div>
+				</fieldset>
+			</form>
+			<input class="login_btn" type="submit" value="로그인하기">
 		</article>
 	</section>
 	<footer>
