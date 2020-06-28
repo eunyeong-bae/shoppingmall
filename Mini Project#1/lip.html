@@ -4,42 +4,13 @@
 	<meta charset="UTF-8">
 	<title>Bae_zzi's Mall</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="product.css">
+
 	<style type="text/css">
-		*{
-			box-sizing: border-box;
-		}
-		header{
-			background-color: #F8E0E6;
-			text-align: center;
-			padding:20px;
-			font-size: 30px;
-			color:white;
-		}
 		#order_list{
 			display: none;
 		}
-		nav ul{
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-			background-color: #333333;
-			overflow: hidden;
-		}
-		nav li{
-			float: left;
-		}
-		nav li a{
-			display: block;
-			color: white;
-			text-align: center;
-			padding: 16px;
-			text-decoration: none;
-		}
-		nav li a:hover{
-			background-color: #111111;
-		}
 		article{
-			width:800px;
 			height: auto;
 			margin: 30px auto 30px auto;
 			display: flex;
@@ -47,33 +18,91 @@
 			align-content: center;
 		}
 		article img{
-			margin-left: 200px; 
+			/*items.css 와 다른점 1*/
+			margin-left: 435px;
 		}
 		article table{
-			margin-top: 50px;
+			width: 800px;
+			height: 400px;
+			border-collapse: collapse;
+			/*items.css 와 다른점 2*/
+			margin: 50px 0 0 235px;
+			text-align: left;
+		}
+		article table th,td{
+			padding: 12px;
+		}
+		article table th{
+			background-color: #f2f2f2;
 		}
 		article button{
 			width: 150px;
-			margin: 30px 0 0 320px;
+			/*items.css 와 다른점 3*/
+			margin: 30px 0 0 530px;
+			padding: 10px;
+			background-color: black;
+			color: white;
+			border: none;
+			cursor: pointer;
 		}
 		fieldset{
 			width: 500px;
 			margin: 30px auto 30px auto;
+			padding:20px 0 0 50px;
 			display: flex;
 			flex-direction: row;
 			align-content: center; 
+			border-radius: 6px;
 		}
-		footer{
-			background-color: #F8E0E6;
-			padding: 10px;
-			text-align: center;
+		input[type=text]{
+			width: 50%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			box-sizing: border-box;
+			border: 2px solid #ccc;
+			background-color: #f8f8f8;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		input[type=text]:focus{
+			border: 3px solid #555;
+		}
+		input[list=uselect]{
+			width: 50%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			box-sizing: border-box;
+			background-color: #f8f8f8;
+			border: 2px solid #ccc;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		input[list=uselect]:focus{
+			border: 3px solid #555;
+		}
+		textarea{
+			width: 75%;
+			height: auto;
+			padding: 12px 20px;
+			box-sizing: border-box;
+			border: 2px solid #ccc;
+			border-radius: 4px;
+			background-color: #f8f8f8;
+			resize: none;
+			cursor: pointer;
+		}
+		textarea:focus{
+			border: 3px solid #555;
+		}
+		fieldset button{
+			width: 25%;
+			font-size: 15px;
+			padding: 16px 32px;
+			margin: 0 0 20px 140px;
+			background-color: black;
 			color: white;
-		}
-		@media screen(max-width: 600px) {
-			nav,article{
-				width: 100%;
-				height: auto;
-			}
+			border: none;
+			cursor: pointer;
 		}
 	</style>
 	<script type="text/javascript">
@@ -81,9 +110,12 @@
 		function showing_orderlist(){
 			if($('#order_list').css('display')=='none'){
 				$('#order_list').show();
+				$('.pagination').hide();
 			}
-			else
+			else{
 				$('#order_list').hide();
+				$('.pagination').show();
+			}
 		}
 		function product_order(){
 			alert('주문되었습니다!');
@@ -92,7 +124,9 @@
 </head>
 <body>
 	<header>
-		<h1>Bae_zzi's Beauty</h1>
+		<a href="index.html">
+			<h1>Bae_zzi's Beauty</h1>
+		</a>
 	</header>
 	<section>
 		<nav>
@@ -100,7 +134,7 @@
 				<li><a href="index.html">Home</a></li>
 				<li><a href="face.html">Face</a></li>
 				<li><a href="eye.html">Eye</a></li>
-				<li><a href="lip.html">Lip</a></li>
+				<li><a href="lip.html" class="active">Lip</a></li>
 				<li><a href="clensor.html">Clensor</a></li>
 				<li><a href="board.html">Board</a></li>
 				<li><a href="login.html">Login</a></li>
@@ -127,7 +161,7 @@
 				</tr>
 				<tr>
 					<th>A/S안내</th>
-					<td colspan="3">스트로베리넷은 홍콩에 위치하고 있으며 온도 조절 시스템을 갖춘 유통 센터에서 주요 지역에 다음날까지 배송됩니다. 이메일 cskr@strawberrynet.com 톨프리: 00798 8521 0804팩스 +852-2811-5138사업장 주소Strawberry Fields,No. 4 A Kung Ngam Village Road,Shau Kei Wan,Hong Kong</td>
+					<td colspan="3">이메일 cskr@strawberrynet.com 톨프리: 00798 8521 0804팩스 +852-2811-5138사업장 주소Strawberry Fields,No. 4 A Kung Ngam Village Road,Shau Kei Wan,Hong Kong</td>
 				</tr>
 				<tr>
 					<th>브랜드</th>
@@ -139,6 +173,16 @@
 				</tr>
 			</table>
 			<button id="showing_list_btn" onclick="showing_orderlist()">주문하기</button>
+			<div class="pagination">
+				<a href="#">&laquo;</a>
+				<a href="#">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="#">6</a>
+				<a href="#">&raquo;</a>
+			</div>
 		</article>
 		<div>
 			<fieldset id="order_list">

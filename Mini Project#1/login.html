@@ -3,63 +3,63 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Bae_zzi's Mall</title>
+	<link rel="stylesheet" type="text/css" href="product.css">
+
 	<style type="text/css">
-		*{
-			box-sizing: border-box;
-		}
-		header{
-			background-color: #F8E0E6;
-			text-align: center;
-			padding:20px;
-			font-size: 30px;
-			color:white;
-		}
-		nav ul{
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-			background-color: #333333;
-			overflow: hidden;
-		}
-		nav li{
-			float: left;
-		}
-		nav li a{
-			display: block;
-			color: white;
-			text-align: center;
-			padding: 16px;
-			text-decoration: none;
-		}
-		nav li a:hover{
-			background-color: #111111;
-		}
 		article fieldset{
 			width: 350px;
+			height: 220px;
 			margin: 100px auto 40px auto;
-			border: 1px solid black;
+			padding: 20px;
+			border: 2px solid black;
+			border-radius: 6px;
+		}
+		label{
+			padding: 30px;
+		}
+		input[type=text]{
+			width: 70%;
+			padding: 12px 20px;
+			margin: 8px 30px;
+			box-sizing: border-box;
+			border: 2px solid #ccc;
+			background-color: #f8f8f8;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		input[type=text]:focus{
+			border: 3px solid #555;
+		}
+		input[type=password]{
+			width: 70%;
+			padding: 12px 20px;
+			margin: 8px 30px 10px 30px;
+			box-sizing: border-box;
+			border: 2px solid #ccc;
+			background-color: #f8f8f8;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		input[tpye=password]:focus{
+			border: 3px solid #555;
 		}
 		.login_btn{
 			width: 100px;
-			margin: 0 450px 50px 550px ;
-		}
-		footer{
-			background-color: #F8E0E6;
-			padding: 10px;
+			margin: 0 500px 30px 570px;
 			text-align: center;
+			padding: 10px;
+			background-color: black;
 			color: white;
-		}
-		@media screen(max-width: 600px) {
-			nav,article{
-				width: 100%;
-				height: auto;
-			}
+			border: none;
+			cursor: pointer;
 		}
 	</style>
 </head>
 <body>
 	<header>
-		<h1>Bae_zzi's Beauty</h1>
+		<a href="index.html">
+			<h1>Bae_zzi's Beauty</h1>
+		</a>
 	</header>
 	<section>
 		<nav>
@@ -70,7 +70,7 @@
 				<li><a href="lip.html">Lip</a></li>
 				<li><a href="clensor.html">Clensor</a></li>
 				<li><a href="board.html">Board</a></li>
-				<li><a href="login.html">Login</a></li>
+				<li><a href="login.html" class="active">Login</a></li>
 			</ul>
 		</nav>
 		<article>
