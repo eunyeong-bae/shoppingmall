@@ -4,87 +4,20 @@
 	<meta charset="UTF-8">
 	<title>Bae_zzi's Mall</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<style type="text/css">
-		*{
-			box-sizing: border-box;
-		}
-		header{
-			background-color: #F8E0E6;
-			text-align: center;
-			padding:20px;
-			font-size: 30px;
-			color:white;
-		}
-		header a{
-			text-decoration: none;
-			color: white;
-		}
-		#order_list{
-			display: none;
-		}
-		nav ul{
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-			background-color: #333333;
-			overflow: hidden;
-		}
-		nav li{
-			float: left;
-		}
-		nav li a{
-			display: block;
-			color: white;
-			text-align: center;
-			padding: 16px;
-			text-decoration: none;
-		}
-		nav li a:hover{
-			background-color: #111111;
-		}
-		article{
-			width:400px;
-			height: auto;
-			margin: 30px auto 30px auto;
-			display: flex;
-			flex-direction: column;
-			align-content: center;
-		}
-		article table{
-			margin-top: 50px;
-		}
-		fieldset{
-			width: 500px;
-			margin: 30px auto 30px auto;
-			display: flex;
-			flex-direction: row;
-			align-content: center; 
-		}
-		section button{
-			width: 100px;
-			margin: 20px 0 0 150px;
-		}
-		footer{
-			background-color: #F8E0E6;
-			padding: 10px;
-			text-align: center;
-			color: white;
-		}
-		@media screen(max-width: 600px) {
-			nav,article{
-				width: 100%;
-				height: auto;
-			}
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="product.css">
+	<link rel="stylesheet" type="text/css" href="items.css">
+
 	<script type="text/javascript">
 		//주문하기 버튼 클릭 시, 주문서 양식 보여주기
 		function showing_orderlist(){
 			if($('#order_list').css('display')=='none'){
 				$('#order_list').show();
+				$('.pagination').hide();
 			}
-			else
+			else{
 				$('#order_list').hide();
+				$('.pagination').show();
+			}
 		}
 		function product_order(){
 			alert('주문되었습니다!');
@@ -104,7 +37,7 @@
 				<li><a href="face.html">Face</a></li>
 				<li><a href="eye.html">Eye</a></li>
 				<li><a href="lip.html">Lip</a></li>
-				<li><a href="clensor.html">Clensor</a></li>
+				<li><a href="clensor.html" class="active">Clensor</a></li>
 				<li><a href="board.html">Board</a></li>
 				<li><a href="login.html">Login</a></li>
 			</ul>
@@ -142,6 +75,16 @@
 				</tr>
 			</table>
 			<button id="showing_list_btn" onclick="showing_orderlist()">주문하기</button>
+			<div class="pagination">
+				<a href="#">&laquo;</a>
+				<a href="#">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="#">6</a>
+				<a href="#">&raquo;</a>
+			</div>
 		</article>
 		<div>
 			<fieldset id="order_list">
